@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 05</title>
+</head>
+<body>
+    <h1>Semântica vs Formas</h1>
+    <hr>
+<h2>Negrito/Destaque</h2>
+Na frase temos uma <b> parte do texto em negrito</b>usando a tag B (não semântica)
+<br>
+Na frase temos uma <strong>parte do tesxto em negrito</strong> usando a tag strong (com semântica)
+<br>
+<h2>Itálico/Ênfase</h2>
+Na frase vamos entrar com uma palavra em <i>itálico</i> usando a tag i (não semântica)
+<br>
+Nesta frase vamos entrar com uma palara em <em>itálico</em> usando a tag EM (com semântica)
+<h2>Texto Marcador</h2>
+Aqui vamos usar um texto com destaque <mark style= "background : Green">de marcação de texto </mark>  usando mark
+<br>
+Aqui vamos usar texto com destaque <mark style="barckground: yellow">de marcação de texto</mark> usando mark
+<h2>Texto grande e pequeno</h2>
+Estamos trabalhando aqui com um <big>texto grande</big> e um <small>texto pequeno</small> nesta frase
+<h2> Texto deletado</h2>
+Neste parágrafo vamos trabalhar com um texto <del>que foi excluído</del> da frase (forma semântica)
+<h2>Texto Inserido</h2>
+Nesta frase vamos demonstrar como <ins>detacar um texto inserido</ins> na frase de forma semântica
+<br>
+Nesta frase vamos demosntra como <u>destacar um texto inserido</u> de forma não semântica
+<h2>Texto sobrescrito</h2>
+Vamos demosntrar uma formula da equação do segundo grau ax <sup>2</sup>+ bx + c = 0 usando a tag sup
+<h2>Texto subescrito</h2>
+Vamos demonstrar o texto subescrito com a formula da água H <sub>2</sub>O
+<h2>Trecho de código fonte</h2>
+Neste exemplo vou demonstrar um trecho de código
+<br>
+inserindo o comando <pre>import numpy as np
+    import pandas as pd
+    
+    # Exemplo de dados (você pode substituir por seu próprio DataFrame)
+    dados = pd.DataFrame({
+        'valor': [10, 12, 14, 15, 100, 16, 18, 19, 25, 1000, 20, 21, 22]
+    })
+    
+    # Função para detectar e remover outliers usando o IQR
+    def remover_outliers(df, coluna):
+        # Calculando o primeiro quartil (Q1) e o terceiro quartil (Q3)
+        Q1 = df[coluna].quantile(0.25)
+        Q3 = df[coluna].quantile(0.75)
+        
+        # Calculando o intervalo interquartil (IQR)
+        IQR = Q3 - Q1
+        
+        # Definindo os limites inferior e superior
+        limite_inferior = Q1 - 1.5 * IQR
+        limite_superior = Q3 + 1.5 * IQR
+        
+        # Removendo os outliers
+        df_sem_outliers = df[(df[coluna] >= limite_inferior) & (df[coluna] <= limite_superior)]
+        
+        return df_sem_outliers
+    
+    # Aplicando a função para remover outliers
+    dados_sem_outliers = remover_outliers(dados, 'valor')
+    
+    # Exibindo os dados antes e depois de remover os outliers
+    print("Dados originais:")
+    print(dados)
+    
+    print("\nDados sem outliers:")
+    print(dados_sem_outliers)
+    </pre>
+    <h2>Citações (quotation) simples</h2>
+    Segundo Steve Jobs <q>A tecnologia move o mundo</q>
+    <h2>Citações completas (livros)</h2>
+    Segundo Sandra Kussunoki no seu livro A dança e o ventre:
+    <blockquote>Dados existentes sobre intervenções cirúrgicas nos corpos contemporâneos visando  à obtenção de um corpo <br> mais próximo do padrão estético tais como lipoaspiração, próteses de silicone, entre outras,
+    comprovam <br> essa busca obsessiva pelo ideal e perfeição, que é basado principalmente na magreza.
+    </blockquote>
+    <h2>Abreviações</h2>
+    Estamos estudando <abbr title="Hypertext Markup Language">HTML</abbr> e <abbr title="Cascading Style Sheet">CSS</abbr>
+    <h2>Texto Invertido</h2>
+    <bdo dir="rtl">Estou estudando HTML</bdo>
+</body>
+</html>
